@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Lomba Futsal - Politeknik Negeri Batam</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset dan Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header & Navbar */
+    header {
+      background-color: #ffffff; 
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+      padding: 10px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      width: 65px;  
+      height: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #004aad;
+      font-weight: 600;
+      margin-left: 25px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    /* Main Content */
+    .detail-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .detail-container h2 {
+      text-align: center;
+      color: #004aad;
+      margin-bottom: 20px;
+    }
+
+    .detail-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .detail-info h3 {
+      color: #004aad;
+      margin-top: 15px;
+    }
+
+    .detail-info p {
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    /* ====== Rules (Aturan) Section ====== */
+    .rules-section {
+      margin-top: 20px;
+      background: #fff;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .rules-section h3 {
+      color: #c0392b;
+      margin-bottom: 10px;
+    }
+
+    .rules-content ol {
+      margin-left: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .rules-content li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .rules-content strong {
+      color: #004aad;
+    }
+
+    /* Schedule & Contact */
+    .schedule-contact {
+      display: flex;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .schedule-box, .contact-box {
+      flex: 1;
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .schedule-box h3, .contact-box h3 {
+      color: #004aad;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #004aad;
+    }
+
+    .schedule-box p, .contact-box p {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-box i, .schedule-box i {
+      color: #004aad;
+      margin-right: 10px;
+      width: 20px;
+    }
+
+    /* Button Group */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .button-group button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .button-group button:hover {
+      background-color: #0056b3;
+    }
+
+    .button-group button:last-child {
+      background-color: #6c757d;
+    }
+
+    .button-group button:last-child:hover {
+      background-color: #545b62;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .detail-container > * {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    /* List styling */
+    .detail-info ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .detail-info li {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    /* Responsif untuk HP */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px 25px;
+      }
+
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      .logo img {
+        width: 50px;
+      }
+
+      .detail-container {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+
+      .schedule-contact {
+        flex-direction: column;
+      }
+
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button-group button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .rules-section { 
+        padding: 14px; 
+      }
+      
+      .rules-content li { 
+        font-size: 14px; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="https://www.polibatam.ac.id/wp-content/uploads/2022/01/poltek.png" alt="Logo Polibatam">
+      </div>
+      <nav>
+        <a href="{{ url("index.html") }}"><i class="fas fa-home"></i> Beranda</a>
+        <a href="{{ url("lomba.html") }}"><i class="fas fa-info-circle"></i> Informasi</a>
+        <a href="{{ url("daftar.html") }}"><i class="fas fa-user-plus"></i> Pendaftaran</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="detail-container">
+    <h2>Lomba Futsal Antar Jurusan</h2>
+    <img src="{{ asset("/Olahraga Futsal.png") }}" alt="Lomba Futsal" class="detail-img">
+
+    <div class="detail-info">
+      <h3><i class="fas fa-futbol"></i> Futsal</h3>
+      <p>
+        Lomba futsal antar jurusan Politeknik Negeri Batam ini jadi ajang seru buat nunjukin semangat, skill, dan kekompakan tiap jurusan. Gak cuma soal menang atau kalah, tapi juga soal gimana caranya kerja bareng satu tim, saling dukung, dan jaga sportivitas.
+      </p>
+      <p>
+        Event ini diadain tiap tahun dan selalu jadi momen yang ditunggu mahasiswa karena suasananya rame, seru, dan penuh energi positif!
+        Setiap tim wajib punya formasi lengkap maksimal 10 pemain (termasuk kapten), jadi semua bisa dapet giliran buat turun ke lapangan. Selain itu, lomba ini juga bisa jadi wadah buat nyari pengalaman baru, nambah relasi antarjurusan, dan pastinya bikin kenangan yang gak bakal dilupain.
+      </p>
+
+      <h3><i class="fas fa-bullseye"></i> Tujuan</h3>
+      <p>
+        Meningkatkan semangat kompetitif, mempererat kerja sama tim, dan menumbuhkan
+        gaya hidup sehat di kalangan mahasiswa. Selain itu, acara ini juga bertujuan untuk:
+      </p>
+      <ul>
+        <li>Membangun solidaritas antar jurusan di lingkungan kampus</li>
+        <li>Mengembangkan bakat dan minat mahasiswa di bidang olahraga</li>
+        <li>Menciptakan wadah positif untuk menyalurkan energi dan kreativitas mahasiswa</li>
+        <li>Memperkenalkan olahraga futsal sebagai aktivitas yang menyenangkan dan menyehatkan</li>
+      </ul>
+    </div>
+
+    <!-- Rules Section -->
+    <section id="rules" class="rules-section">
+      <h3><i class="fas fa-clipboard-list"></i> Aturan Permainan</h3>
+
+      <div class="rules-content">
+        <ol>
+          <li><strong>Jumlah Pemain:</strong> Tiap tim maksimal 10 pemain (5 pemain inti + 5 cadangan(minimal 2 cadangan)). Minimal 3 pemain di lapangan.</li>
+          <li><strong>Safety:</strong> Setiap pemain wajib menggunakan dua pasang deker dan sepatu futsal yang sesuai standar keamanan.</li>
+          <li><strong>Lama Pertandingan:</strong> 2 × 10 menit waktu kotor. Istirahat 5 menit antar babak.</li>
+          <li><strong>Gawang & Bola:</strong> Ukuran gawang 3m × 2m. Bola nomor 4 dengan pantulan kecil.</li>
+          <li><strong>Pelanggaran (Foul):</strong> Tarik kaos, senggolan berbahaya, atau tangan (kecuali kiper) dihitung foul. Setelah 5 foul, tim lawan mendapat tendangan bebas tanpa pagar.</li>
+          <li><strong>Kiper:</strong> Kiper hanya boleh memegang bola selama maksimal 4 detik di area gawangnya.</li>
+          <li><strong>Restart:</strong> Kick-in untuk bola keluar samping; corner untuk bola kena pemain bertahan; goal kick untuk gol sendiri.</li>
+          <li><strong>Kartu & Sanksi:</strong> Kartu kuning peringatan; kartu merah keluarkan pemain dan tim main dengan jumlah berkurang sesuai ketentuan sementara.</li>
+          <li><strong>Fair Play:</strong> Jaga sportivitas. Keputusan wasit bersifat final.</li>
+          <li><strong>Pendaftaran:</strong> Setiap tim wajib mendaftarkan diri sebelum batas waktu yang ditentukan dengan melengkapi semua persyaratan.</li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="schedule-contact">
+      <div class="schedule-box">
+        <h3><i class="fas fa-calendar-alt"></i> Jadwal Pelaksanaan</h3>
+        <p><i class="fas fa-calendar-day"></i> <strong>Tanggal:</strong> 13 Januari 2025</p>
+        <p><i class="fas fa-clock"></i> <strong>Waktu:</strong> 08.00 - 17.00 WIB</p>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Tempat:</strong> Lapangan Futsal Polibatam</p>
+        <p><i class="fas fa-user-plus"></i> <strong>Pendaftaran:</strong> 1 November - 5 Januari 2025</p>
+      </div>
+
+      <div class="contact-box">
+        <h3><i class="fas fa-phone-alt"></i> Kontak Panitia</h3>
+        <p><i class="fas fa-user"></i> <strong>Reyvandito</strong></p>
+        <p><i class="fas fa-phone"></i> 0878-1355-9019</p>
+        <p><i class="fas fa-envelope"></i> futsal.polibatam@email.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Gedung Olahraga Polibatam</p>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button onclick="window.location.href='daftar'"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
+      <button onclick="window.location.href='index'"><i class="fas fa-arrow-left"></i> Kembali ke Daftar Lomba</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Politeknik Negeri Batam - Turnamen Futsal Antar Jurusan</p>
+  </footer>
+</body>
+</html>
