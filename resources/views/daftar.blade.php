@@ -756,7 +756,7 @@
             </div>
             <div class="form-group">
               <label for="anggota_nim_${anggotaCount}">NIM</label>
-              <input type="text" id="anggota_nim_${anggotaCount}" name="anggota_nim[]" required placeholder="NIM anggota">
+              <input type="number" id="anggota_nim_${anggotaCount}" name="anggota_nim[]" required placeholder="NIM anggota">
             </div>
             <div class="form-group">
               <label for="anggota_prodi_${anggotaCount}">Program Studi</label>

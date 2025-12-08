@@ -48,18 +48,10 @@
       font-weight: 600;
       margin-left: 25px;
       transition: color 0.2s;
-      padding: 8px 12px;
-      border-radius: 5px;
     }
 
     nav a:hover {
       color: #007bff;
-      background-color: #f0f8ff;
-    }
-
-    nav a.active {
-      background-color: #004aad;
-      color: white;
     }
 
     /* Main Content */
@@ -84,12 +76,6 @@
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 20px;
-      background-color: #e9ecef;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #6c757d;
-      font-size: 1.2rem;
     }
 
     .detail-info h3 {
@@ -113,7 +99,7 @@
     }
 
     .rules-section h3 {
-      color: #c0392b; /* merah lembut untuk aksen futsal */
+      color: #c0392b;
       margin-bottom: 10px;
     }
 
@@ -128,20 +114,8 @@
       font-size: 15px;
     }
 
-    /* tombol toggle kecil */
-    .rules-toggle {
-      margin-top: 12px;
-      background: #c0392b;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .rules-toggle:hover {
-      background: #a93226;
+    .rules-content strong {
+      color: #004aad;
     }
 
     /* Schedule & Contact */
@@ -173,7 +147,7 @@
       align-items: center;
     }
 
-    .contact-box i {
+    .contact-box i, .schedule-box i {
       color: #004aad;
       margin-right: 10px;
       width: 20px;
@@ -203,8 +177,6 @@
 
     .button-group button:hover {
       background-color: #0056b3;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .button-group button:last-child {
@@ -232,6 +204,18 @@
 
     .detail-container > * {
       animation: fadeIn 0.8s ease forwards;
+    }
+
+    /* List styling */
+    .detail-info ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .detail-info li {
+      margin-bottom: 8px;
+      font-size: 1rem;
     }
 
     /* Responsif untuk HP */
@@ -285,21 +269,21 @@
         <img src="https://www.polibatam.ac.id/wp-content/uploads/2022/01/poltek.png" alt="Logo Polibatam">
       </div>
       <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
-        <a href="lomba.html"><i class="fas fa-info-circle"></i> Informasi</a>
-        <a href="daftar.html" class="active"><i class="fas fa-user-plus"></i> Pendaftaran</a>
       </nav>
     </div>
   </header>
 
   <main class="detail-container">
-    <h2>Lomba Futsal Antar Jurusan</h2>
-    <div class="detail-img">
-      [Gambar Lomba Futsal]
-    </div>
+    <h2>Lomba Futsal Mahasiswa</h2>
+<div style="text-align:center; padding:10px;">
+  <img src="/images/futsal biru.jpg"
+       alt="Turnamen Futsal"
+       style="display:block; margin:0 auto 20px auto; max-width:90%; height:auto; border-radius:10px;">
+  <h3 style="margin-top:0; font-size:1.5rem; color:#007BFF;"></h3>
+</div>
 
     <div class="detail-info">
-      <h3>Futsal</h3>
+     <h3><i class="fas fa-futbol text-primary"></i> Futsal</h3>
       <p>
         Lomba futsal antar jurusan Politeknik Negeri Batam ini jadi ajang seru buat nunjukin semangat, skill, dan kekompakan tiap jurusan. Gak cuma soal menang atau kalah, tapi juga soal gimana caranya kerja bareng satu tim, saling dukung, dan jaga sportivitas.
       </p>
@@ -308,7 +292,7 @@
         Setiap tim wajib punya formasi lengkap maksimal 10 pemain (termasuk kapten), jadi semua bisa dapet giliran buat turun ke lapangan. Selain itu, lomba ini juga bisa jadi wadah buat nyari pengalaman baru, nambah relasi antarjurusan, dan pastinya bikin kenangan yang gak bakal dilupain.
       </p>
 
-      <h3>Tujuan</h3>
+       <h3><i class="fas fa-bullseye"></i> Tujuan</h3>
       <p>
         Meningkatkan semangat kompetitif, mempererat kerja sama tim, dan menumbuhkan
         gaya hidup sehat di kalangan mahasiswa. Selain itu, acara ini juga bertujuan untuk:
@@ -362,7 +346,11 @@
 
     <div class="button-group">
       <button onclick="window.location.href='daftar'"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
-      <button onclick="window.location.href='index'"><i class="fas fa-arrow-left"></i> Kembali ke Daftar Lomba</button>
+      <button onclick="window.location.href='{{ route('home') }}'"
+        class="btn btn-outline-primary rounded-pill px-4">
+  <i class="fas fa-arrow-left"></i> Kembali ke Daftar Lomba
+</button>
+
     </div>
   </main>
 

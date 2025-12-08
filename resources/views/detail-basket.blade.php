@@ -269,16 +269,18 @@
         <img src="https://www.polibatam.ac.id/wp-content/uploads/2022/01/poltek.png" alt="Logo Polibatam">
       </div>
       <nav>
-        <a href="{{ url("index.html") }}"><i class="fas fa-home"></i> Beranda</a>
-        <a href="{{ url("lomba.html") }}"><i class="fas fa-info-circle"></i> Informasi</a>
-        <a href="{{ url("daftar.html") }}"><i class="fas fa-user-plus"></i> Pendaftaran</a>
       </nav>
     </div>
   </header>
 
   <main class="detail-container">
-    <h2>Lomba Basket Antar Jurusan</h2>
-    <img src="{{ asset("/black-basketball-player-running-score-600nw-2388728377.webp") }}" alt="Lomba Basket" class="detail-img">
+    <h2>Lomba Basket Mahasiswa</h2>
+<div style="text-align:center; padding:10px;">
+  <img src="/images/basket biru.webp"
+       alt="Turnamen Basket"
+       style="display:block; margin:0 auto 20px auto; max-width:90%; height:auto; border-radius:10px;">
+  <h3 style="margin-top:0; font-size:1.5rem; color:#007BFF;"></h3>
+</div>
 
     <div class="detail-info">
       <h3><i class="fas fa-basketball-ball"></i> Basket</h3>
@@ -342,9 +344,13 @@
       </div>
     </div>
 
-    <div class="button-group">
+   <div class="button-group">
       <button onclick="window.location.href='daftar'"><i class="fas fa-user-plus"></i> Daftar Sekarang</button>
-      <button onclick="window.location.href='index'"><i class="fas fa-arrow-left"></i> Kembali ke Daftar Lomba</button>
+      <button onclick="window.location.href='{{ route('home') }}'"
+        class="btn btn-outline-primary rounded-pill px-4">
+  <i class="fas fa-arrow-left"></i> Kembali ke Daftar Lomba
+</button>
+
     </div>
   </main>
 

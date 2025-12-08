@@ -205,11 +205,12 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Beranda</a>
-                   
+                        <a class="nav-link active" href="{{ route('home') }}">Beranda</a>
                      
                     <li class="nav-item">
-                        <a class="nav-link" href="/daftar">Pendaftaran</a>
+                        <a class="nav-link" href="{{ url('/daftar') }}">Pendaftaran</a>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/daftar') }}">admin</a>
                     </li>
                  
                     </li>
@@ -353,7 +354,7 @@
             </div>
             <hr>
             <div class="text-center">
-                <p>&copy; 2023 Politeknik Negeri Batam. All rights reserved.</p>
+                <p>&copy; 2025 Politeknik Negeri Batam. All rights reserved.</p>
             </div>
         </div>
     </footer>

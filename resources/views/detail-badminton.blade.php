@@ -269,19 +269,16 @@
         <img src="https://www.polibatam.ac.id/wp-content/uploads/2022/01/poltek.png" alt="Logo Polibatam">
       </div>
       <nav>
-        <a href="{{ url("index.html") }}"><i class="fas fa-home"></i> Beranda</a>
-        <a href="{{ url("lomba.html") }}"><i class="fas fa-info-circle"></i> Informasi</a>
-        <a href="{{ url("daftar.html") }}"><i class="fas fa-user-plus"></i> Pendaftaran</a>
       </nav>
     </div>
   </header>
 
   <main class="detail-container">
     <h2>Lomba Badminton Mahasiswa</h2>
-<div style="text-align:center; padding:20px;">
+<div style="text-align:center; padding:10px;">
   <img src="/images/badminton biru.avif"
        alt="Turnamen Bulutangkis"
-       style="display:block; margin:0 auto 24px auto; max-width:90%; height:auto; border-radius:12px;">
+       style="display:block; margin:0 auto 20px auto; max-width:90%; height:auto; border-radius:10px;">
   <h3 style="margin-top:0; font-size:1.5rem; color:#007BFF;"></h3>
 </div>
 
