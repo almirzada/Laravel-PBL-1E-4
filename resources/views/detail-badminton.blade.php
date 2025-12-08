@@ -362,7 +362,7 @@
   </main>
 
   <footer>
-    <p>© 2025 Politeknik Negeri Batam. Turnamen Badminton Antar Mahasiswa</p>
+    <p>© 2025 Politeknik Negeri Batam - Turnamen Badminton Antar Mahasiswa</p>
   </footer>
 </body>
 </html>
