@@ -203,6 +203,7 @@
       display: flex;
       gap: 15px;
       margin-top: 30px;
+      border-radius: 40px;
     }
 
     button {
@@ -218,11 +219,13 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      border-radius: 30px;
     }
 
     button[type="submit"] {
       background: linear-gradient(135deg, var(--primary), #0066cc);
       color: white;
+      border-radius: 30px;
     }
 
     button[type="submit"]:hover {
