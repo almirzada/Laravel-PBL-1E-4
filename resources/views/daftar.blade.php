@@ -533,11 +533,7 @@
           alt="Logo Polibatam"
         />
       </div>
-      <nav>
-        <a href="index.html"><i class="fas fa-home"></i> Beranda</a>
-       
-        <a href="daftar.html" class="active"><i class="fas fa-edit"></i> Pendaftaran</a>
-      </nav>
+      
     </div>
   </div>
 
@@ -611,7 +607,7 @@
           </div>
           <div class="lomba-card" data-lomba="Badminton">
             <div class="lomba-icon">
-              <i class="fas TableTennisPaddleBall"></i>
+              <i class="fas fa-table-tennis"></i>
             </div>
             <h4>Badminton</h4>
             <p>Maks. 2 Pemain</p>
