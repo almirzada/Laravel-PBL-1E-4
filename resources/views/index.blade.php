@@ -30,13 +30,82 @@
             height: 50px;
         }
         
+        /* Hero Section Informasi Kampus */
         .hero-section {
-            background: linear-gradient(rgba(0, 84, 179, 0.8), rgba(0, 84, 179, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background: 
+                linear-gradient(135deg, rgba(0, 84, 179, 0.65) 0%, rgba(0, 123, 255, 0.55) 100%),
+                url('https://www.polibatam.ac.id/wp-content/uploads/2022/04/MG_8893-scaled.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
-            padding: 100px 0;
+            padding: 120px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+            font-size: 3.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.6;
+        }
+        
+        .btn-hero {
+            background-color: var(--accent-color);
+            color: #212529;
+            font-weight: 600;
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+            z-index: -1;
+        }
+        
+        .btn-hero:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+        }
+        
+        .btn-hero:hover::before {
+            left: 100%;
         }
         
         .section-title {
