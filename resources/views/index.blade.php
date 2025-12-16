@@ -205,8 +205,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('home') }}">Beranda</a>
-                     
+                        <a class="nav-link active" href="{{ route('home') }}">Beranda</a> 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/daftar') }}">Pendaftaran</a>
                         <li class="nav-item">
