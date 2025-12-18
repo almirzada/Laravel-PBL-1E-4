@@ -1,41 +1,67 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detail Lomba Badminton - Politeknik Negeri Batam</title>
+  <title>Berita Kampus - Politeknik Negeri Batam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+
     /* Reset dan Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --primary-color: #0056b3;
+      --primary-dark: #003d82;
+      --secondary-color: #f8f9fa;
+      --accent-color: #ffc107;
+      --accent-dark: #e0a800;
+      --text-color: #333;
+      --light-color: #fff;
+      --gray-light: #f5f7fa;
+      --gray-medium: #6c757d;
     }
 
     body {
-      font-family: "Poppins", sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background: linear-gradient(to bottom,
+          #f0f1f3ff 80%,
+          #ffffff 100%);
     }
 
     /* Header & Navbar */
-    header {
-      background-color: #ffffff; 
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-      padding: 10px 50px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
     .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav .nav-link {
+            position: relative;
+            padding-bottom: 6px;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffffffff;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+
+
+        .navbar-brand img {
+            height: 50px;
+        }
 
     .logo img {
       width: 65px;  
@@ -263,15 +289,31 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="https://www.polibatam.ac.id/wp-content/uploads/2022/01/poltek.png" alt="Logo Polibatam">
-      </div>
-      <nav>
-      </nav>
-    </div>
-  </header>
+   <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.polibatam.ac.id/wp-content/uploads/2022/01/poltek.png"
+                    alt="Politeknik Negeri Batam">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('home') }}">Beranda</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/daftar') }}">Pendaftaran</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/daftar') }}">Admin</a>
+                    </li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
   <main class="detail-container">
     <h2>Lomba Badminton Mahasiswa</h2>
