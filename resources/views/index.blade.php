@@ -403,7 +403,7 @@
                 <!-- Card 2 -->
                 <div class="col-md-4">
                     <div class="news-card">
-                        <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                        <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/05/30084044/Teknik-Dasar-Olahraga-Futsal-dan-Beragam-Aturannya.jpg.webp"
                             alt="Kompetisi Futsal">
                         <div class="card-body">
                             <div class="news-date"><i class="far fa-calendar-alt me-2"></i>12 Oktober 2025</div>
