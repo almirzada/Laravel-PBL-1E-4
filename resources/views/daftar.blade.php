@@ -725,6 +725,49 @@
           }
         });
       });
+      
+function getProgramStudiOptions() {
+  return `
+    <optgroup label="Teknik Informatika">
+      <option value="D3-TI">D3 Teknik Informatika</option>
+      <option value="D4-RKS">D4 Rekayasa Keamanan Siber</option>
+      <option value="D4-MJ">D4 Multimedia dan Jaringan</option>
+      <option value="D4-TRM">D4 Teknologi Rekayasa Multimedia</option>
+      <option value="D4-TP">D4 Teknologi Permainan</option>
+      <option value="S2-TK">D4 Magister Terapan (S2) / Teknik Komputer</option>
+      <option value="D4-RPL">D4 Rekayasa Perangkat Lunak</option>
+    <option value="D4-ANIM">D4 Animasi</option>
+     <option value="D3-TG">D3 Teknologi Geomatika</option>   
+  </optgroup>
+
+    <optgroup label="Manajemen dan Bisnis">
+      <option value="D3-AK">D3 Akuntansi</option>
+      <option value="D4-AM">D4 Akuntansi Manajerial</option>
+      <option value="D4-ABT">D4 Administrasi Bisnis Terapan</option>
+      <option value="D4-LPI">D4 Logistik Perdagangan Internasional</option>
+      <option value="D2-DB">D2 Jalur Cepat Distribusi Barang</option>
+    </optgroup>
+
+    <optgroup label="Teknik Elektro">
+    <option value="D3-TEM">D3 Teknik Elektronika Manufaktur</option>
+      <option value="D4-TRE">D4 Teknologi Rekayasa Elektronika</option>
+      <option value="D3-TI">D3 Teknik Instrumentasi</option>
+      <option value="D4-TM">D4 Teknik Mekatronika</option>
+      <option value="D4-TRPE">D4 Teknologi Rekayasa Pembangkit Energi</option>
+      <option value="D4-TRR">D4 Teknologi Rekayasa Robotika</option>
+    </optgroup>
+
+    <optgroup label="Teknik Mesin">
+      <option value="D3-TM">D3 Teknik Mesin</option>
+      <option value="D3-TPPU">D3 ATeknik Perawatan Pesawat Udara</option>
+      <option value="D4-TRKP">D4 Teknonologi Rekayasa Konstruksi Perkapalan</option>
+      <option value="D4-TRPF">D4 Teknologi Rekayasa Pengelasan dan Fabrikasi</option>
+      <option value="D4-DB">D4 Teknologi Rekayasa Metalurgi</option>
+      <option value="PSPPI-PPI">Program Profesi Insinyur</option>
+    </optgroup>
+  `;
+}
+
 
       // Fungsi untuk menambah anggota
       function tambahAnggota() {
@@ -757,14 +800,17 @@
               <label for="anggota_nim_${anggotaCount}">NIM</label>
               <input type="number" id="anggota_nim_${anggotaCount}" name="anggota_nim[]" required placeholder="NIM anggota">
             </div>
-            <div class="form-group">
-              <label for="anggota_prodi_${anggotaCount}">Program Studi</label>
-              <input type="text" id="anggota_prodi_${anggotaCount}" name="anggota_prodi[]" required placeholder="Program studi anggota">
-            </div>
-            <div class="form-group">
-              <label for="anggota_posisi_${anggotaCount}">Posisi</label>
-              <select id="anggota_posisi_${anggotaCount}" name="anggota_posisi[]" required>
-                <option value="">-- Pilih Posisi --</option>
+          <div class="form-group">
+  <label for="program_studi_${anggotaCount}">Program Studi</label>
+  <select id="program_studi_${anggotaCount}" name="program_studi_[]" required>
+    <option value="">-- Pilih --</option>
+    ${getProgramStudiOptions()}
+  </select>
+</div>
+          <div class="form-group">
+              <label for="anggota_posisi_${anggotaCount}">Tahun angkatan</label>
+              <select id="anggota_posisi_${anggotaCount}" name="Tahun angkatan[]" required>
+                <option value="">-- Pilih --</option>
                 ${getPosisiOptions(currentLomba)}
               </select>
             </div>
@@ -784,37 +830,43 @@
         updateTambahButton();
       }
 
-      // Fungsi untuk mendapatkan opsi posisi berdasarkan lomba
+      // Fungsi untuk mendapatkan opsi tahun angkatan
       function getPosisiOptions(lomba) {
         switch(lomba) {
           case 'Futsal':
             return `
-              <option value="Kiper">Kiper</option>
-              <option value="Bek">Bek</option>
-              <option value="Gelandang">Gelandang</option>
-              <option value="Penyerang">Penyerang</option>
-              <option value="Cadangan">Cadangan</option>
+              <option value="Kiper">2022</option>
+              <option value="Bek">2023</option>
+              <option value="Gelandang">2024</option>
+              <option value="Penyerang">2025</option>
+              <option value="Cadangan">2026</option>
             `;
           case 'Basket':
             return `
-              <option value="Point Guard">Point Guard</option>
-              <option value="Shooting Guard">Shooting Guard</option>
-              <option value="Small Forward">Small Forward</option>
-              <option value="Power Forward">Power Forward</option>
-              <option value="Center">Center</option>
-              <option value="Cadangan">Cadangan</option>
+               <option value="Kiper">2022</option>
+              <option value="Bek">2023</option>
+              <option value="Gelandang">2024</option>
+              <option value="Penyerang">2025</option>
+              <option value="Cadangan">2026</option>
             `;
           case 'Badminton':
             return `
-              <option value="Pemain 1">Pemain 1</option>
-              <option value="Pemain 2">Pemain 2</option>
+               <option value="Kiper">2022</option>
+              <option value="Bek">2023</option>
+              <option value="Gelandang">2024</option>
+              <option value="Penyerang">2025</option>
+              <option value="Cadangan">2026</option>
             `;
           default:
             return `
-              <option value="Pemain">Pemain</option>
-              <option value="Cadangan">Cadangan</option>
+               <option value="Kiper">2022</option>
+              <option value="Bek">2023</option>
+              <option value="Gelandang">2024</option>
+              <option value="Penyerang">2025</option>
+              <option value="Cadangan">2026</option>
             `;
         }
+
       }
 
       // Fungsi untuk menghapus anggota
@@ -902,14 +954,14 @@
         anggotaItems.forEach(item => {
           const nama = item.querySelector('input[name="anggota_nama[]"]').value;
           const nim = item.querySelector('input[name="anggota_nim[]"]').value;
-          const prodi = item.querySelector('input[name="anggota_prodi[]"]').value;
-          const posisi = item.querySelector('select[name="anggota_posisi[]"]').value;
+          const prodi = item.querySelector('input[name="program_studi_[]"]').value;
+          const angkatan = item.querySelector('select[name="anggota_angkatan[]"]').value;
 
           formData.anggota.push({
             nama: nama,
             nim: nim,
             prodi: prodi,
-            posisi: posisi
+            angkatan: angkatan,
           });
         });
 
