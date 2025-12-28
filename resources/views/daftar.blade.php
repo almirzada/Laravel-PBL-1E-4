@@ -557,10 +557,10 @@
         </div>
 
         <div class="form-group">
-          <label for="nama"><i class="fas fa-user"></i> Nama Lengkap:</label>
+          <label for="nama"><i class="fas fa-user"></i> Nama Tim:</label>
           <div class="input-with-icon">
             <i class="fas fa-user"></i>
-            <input type="text" id="nama" required placeholder="Masukkan nama lengkap Anda">
+            <input type="text" id="nama" required placeholder="Masukkan nama Tim">
           </div>
         </div>
       </div>
