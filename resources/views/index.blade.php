@@ -39,7 +39,7 @@
             padding-bottom: 6px;
         }
 
-        .navbar-nav .nav-link::after {
+        .navbar-nav .nav-link::after { tess
             content: "";
             position: absolute;
             left: 50%;
